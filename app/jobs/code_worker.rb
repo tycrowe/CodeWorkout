@@ -148,6 +148,7 @@ class CodeWorker
   def execute_javatest(class_name, attempt_dir, pre_lines, answer_lines)
     if CodeWorkout::Config::JAVA.key? :daemon_url
       url = CodeWorkout::Config::JAVA[:daemon_url] % {attempt_dir: attempt_dir}
+      puts "URL: #{url}"
       response = Net::HTTP.get_response(URI.parse(url))
       puts "%{url} => response %{response.code}"
     else
@@ -160,39 +161,16 @@ class CodeWorker
     logfile = attempt_dir + '/reports/compile.log'
     if File.exist?(logfile)
       xtra = ''
-      skip = 0
-      compile_out = File.foreach(logfile) do |line|
-        line.chomp!
-        # puts "checking line: #{line}"
-        if line =~ /^\S+\.java:\s*([0-9]+)\s*:\s*(?:warning:\s*)?(.*)/
-          line_no = $1.to_i - pre_lines
-          if line_no > answer_lines
-            line_no = answer_lines
-            xtra = ', maybe a missing delimiter or closing brace?'
-          end
-          if !error.blank?
-            error += '. '
-          end
-          error += "line #{line_no}: #{$2}#{xtra}"
-          # puts "error now: #{error}"
-          if !xtra.empty?
-            break
-          end
-          skip = 2
-        elsif line =~ /^\s*(found|expected|required|symbol)\s*:\s*(.*)/
-          if $1 == 'symbol'
-            error += ": #{$2}"
-          else
-            error += "\n#{$1}: #{$2}"
-          end
-          # puts "error now: #{error}"
-          break
-        else
-          if skip == 0
-            break
-          else
-            skip = skip - 1
-          end
+      errorfound = false
+      includelines = 0
+      File.readlines(logfile).each do |line|
+        if line.include? "error"
+          errorfound = true
+          error += line
+          includelines += 1
+        elsif errorfound && includelines > 0
+          error += line
+          includelines -= 1
         end
       end
     end

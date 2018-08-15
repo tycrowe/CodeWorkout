@@ -26,6 +26,7 @@ module CodeWorkout
         "-Dant.home=#{ANT_HOME} " \
         "-Dresource_dir=#{APP_DIR}/usr/resources/Java " \
         "-Dwork_dir=#{APP_DIR}/%{attempt_dir} " \
+        "\" " \
         "ant " \
         "-Dattempt_dir=%{attempt_dir} " \
         "-Dbasedir=. " \
