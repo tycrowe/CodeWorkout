@@ -405,6 +405,7 @@ DEPENDENCIES
   active_record-acts_as
   active_record_union
   active_skin!
+  activesupport (= 4.2.7.1)
   activeadmin!
   acts-as-taggable-on
   acts_as_list
