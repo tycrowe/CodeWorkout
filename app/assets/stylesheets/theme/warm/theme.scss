@@ -79,7 +79,7 @@
 /* Basic text look */
 
 h1 {
-  color: #3da2b4;
+  color: #ffffff;
   text-shadow: 0 -1px 0 #231914;
 }
 
@@ -113,7 +113,7 @@ a:hover, a:focus { color: #247184; }
     color: white;
     background-color: #00703C;
     *background-color: #00703C; }
-  &:active, &.active { background-color: #00703C; }
+  &:active, &.active { background-color: #00703C; color: white; }
 }
 
 
