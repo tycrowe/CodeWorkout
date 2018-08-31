@@ -89,8 +89,8 @@ h1, h2, h3, h4, h5, h6 {
 
 h2 { border-bottom: 1px solid #333; }
 
-a { color: #3da2b4; font-weight: bold; }
-a:hover, a:focus { color: #247184; }
+a { color: #ffffff; font-weight: bold; }
+a:hover, a:focus { color: #ffffff; }
 .navbar a { font-weight: inherit; }
 
 .btn-primary {
@@ -110,7 +110,7 @@ a:hover, a:focus { color: #247184; }
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
   &:hover, &:focus, &:active, &.active, &.disabled, &[disabled] {
-    color: white;
+    color: black;
     background-color: #00703C;
     *background-color: #00703C; }
   &:active, &.active { background-color: #00703C; color: white; }
@@ -157,7 +157,7 @@ a:hover, a:focus { color: #247184; }
 /* Right sidebar text */
 
 .sidebar h2 {
-  color: #3da2b4;
+  color: #FFFFFF;
   text-shadow: 0 -1px 0 #231914;
   background: -webkit-gradient(linear, left top, right top,
     from(#dfcdb2), to(#e8d8c0));
