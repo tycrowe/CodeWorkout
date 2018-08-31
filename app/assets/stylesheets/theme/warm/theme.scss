@@ -48,12 +48,12 @@
 .navbar-inverse .nav > li > a:focus,
 .navbar-inverse .navbar-link:hover,
 .navbar-inverse .navbar-link:focus {
-  background: #efb04f;
+  background: #ffffff;
   text-decoration: none;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  border: 1px solid #fccc85;
+  border: 1px solid #ffffff;
   margin-right: -2px;
   text-shadow: 0 1px 0 #281f1b;
   -webkit-transition: background .5s;
@@ -73,7 +73,7 @@
 }
 
 .navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus {
-  color: #efb04f;
+  color: #ffffff;
 }
 
 /* Basic text look */
@@ -106,7 +106,7 @@ a:hover, a:focus { color: #247184; }
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFBB450', endColorstr='#FFF89406', GradientType=0);
   border-color: #009b5f #00703C #00703C;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  *background-color: #f89406;
+  *background-color: #009b5f;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
   &:hover, &:focus, &:active, &.active, &.disabled, &[disabled] {
@@ -191,7 +191,7 @@ a:hover, a:focus { color: #247184; }
 
 /* Search results */
 .teaser-title p {
-  color: #3da2b4;
+  color: #FFFFFF;
   text-shadow: 0 -1px 0 #231914;
   background: -webkit-gradient(linear, left top, right top,
     from(#dfcdb2), to(#e8d8c0));
