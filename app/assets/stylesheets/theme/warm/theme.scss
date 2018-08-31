@@ -96,7 +96,7 @@ a:hover, a:focus { color: #247184; }
 .btn-primary {
   color: white;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #f9a732;
+  background-color: #00703C;
   background-image: -moz-linear-gradient(top, #009b5f, #00703C);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#009b5f), to(#00703C));
   background-image: -webkit-linear-gradient(top, #009b5f, #00703C);
@@ -104,16 +104,16 @@ a:hover, a:focus { color: #247184; }
   background-image: linear-gradient(to bottom, #009b5f, #00703C);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFBB450', endColorstr='#FFF89406', GradientType=0);
-  border-color: #009b5f #00703C #ad6704;
+  border-color: #009b5f #00703C #00703C;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   *background-color: #f89406;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
   &:hover, &:focus, &:active, &.active, &.disabled, &[disabled] {
     color: white;
-    background-color: #f89406;
-    *background-color: #df8505; }
-  &:active, &.active { background-color: #c67605; }
+    background-color: #00703C;
+    *background-color: #00703C; }
+  &:active, &.active { background-color: #00703C; }
 }
 
 
